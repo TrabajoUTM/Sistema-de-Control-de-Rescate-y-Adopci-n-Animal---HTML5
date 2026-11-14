@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Listado de animales rescatados con su estado dentro del refugio.">
+  <title>Rescates - Sistema de Control de Rescate y Adopción Animal</title>
+</head>
+<body>
+  <a href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header>
+    <h1>Sistema de Control de Rescate y Adopción Animal</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html">Registrar rescate</a></li>
+        <li><a href="rescates.html" aria-current="page">Rescates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <section aria-labelledby="titulo-rescates">
+      <h2 id="titulo-rescates">Registro de rescates</h2>
+      <p>Consulta los animales rescatados y su estado actual. Para añadir uno nuevo, <a href="reportar.html">registra un rescate</a>.</p>
+
+      <table>
+        <caption>Animales rescatados registrados al 13 de noviembre de 2026</caption>
+        <thead>
+          <tr>
+            <th scope="col">N.º de ficha</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Especie</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Edad (meses)</th>
+            <th scope="col">Fecha de rescate</th>
+            <th scope="col">Lugar</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">001</th>
+            <td>Canelo</td>
+            <td>Perro</td>
+            <td>Macho</td>
+            <td>18</td>
+            <td><time datetime="2026-10-02">02/10/2026</time></td>
+            <td>Portoviejo</td>
+            <td>Disponible</td>
+          </tr>
+          <tr>
+            <th scope="row">002</th>
+            <td>Michi</td>
+            <td>Gato</td>
+            <td>Hembra</td>
+            <td>8</td>
+            <td><time datetime="2026-10-15">15/10/2026</time></td>
+            <td>Manta</td>
+            <td>En tratamiento</td>
+          </tr>
+          <tr>
+            <th scope="row">003</th>
+            <td>Luna</td>
+            <td>Perro</td>
+            <td>Hembra</td>
+            <td>30</td>
+            <td><time datetime="2026-10-20">20/10/2026</time></td>
+            <td>Montecristi</td>
+            <td>En proceso de adopción</td>
+          </tr>
+          <tr>
+            <th scope="row">004</th>
+            <td>Rocky</td>
+            <td>Perro</td>
+            <td>Macho</td>
+            <td>24</td>
+            <td><time datetime="2026-11-01">01/11/2026</time></td>
+            <td>Portoviejo</td>
+            <td>Adoptado</td>
+          </tr>
+          <tr>
+            <th scope="row">005</th>
+            <td>Nube</td>
+            <td>Gato</td>
+            <td>Hembra</td>
+            <td>5</td>
+            <td><time datetime="2026-11-10">10/11/2026</time></td>
+            <td>Jipijapa</td>
+            <td>Rescatado</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="7">Total de animales registrados</th>
+            <td>5</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section aria-labelledby="titulo-fichas">
+      <h2 id="titulo-fichas">Fichas destacadas</h2>
+
+      <article>
+        <h3>Canelo</h3>
+        <p>Perro macho de 18 meses rescatado en Portoviejo. Ya fue evaluado por el veterinario y se encuentra apto para adopción.</p>
+        <p>Estado: <mark>Disponible</mark></p>
+      </article>
+
+      <article>
+        <h3>Michi</h3>
+        <p>Gata de 8 meses rescatada en Manta. Recibe tratamiento veterinario antes de quedar disponible.</p>
+        <p>Estado: En tratamiento</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="titulo-estados">
+      <h2 id="titulo-estados">Estados del sistema</h2>
+
+      <h3>Estados de un animal</h3>
+      <ul>
+        <li>Rescatado</li>
+        <li>En tratamiento</li>
+        <li>Disponible</li>
+        <li>En proceso de adopción</li>
+        <li>Adoptado</li>
+      </ul>
+
+      <h3>Estados de una solicitud de adopción</h3>
+      <ul>
+        <li>Pendiente</li>
+        <li>Aprobada</li>
+        <li>Rechazada</li>
+        <li>Vencida</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sistema de Control de Rescate y Adopción Animal. Proyecto académico de la Universidad Técnica de Manabí, Facultad de Ciencias Informáticas.</p>
+    <p><a href="index.html">Volver al inicio</a></p>
+  </footer>
+</body>
+</html>

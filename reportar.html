@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario para registrar el rescate de un animal y crear su ficha.">
+  <title>Registrar rescate - Sistema de Control de Rescate y Adopción Animal</title>
+</head>
+<body>
+  <a href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header>
+    <h1>Sistema de Control de Rescate y Adopción Animal</h1>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html" aria-current="page">Registrar rescate</a></li>
+        <li><a href="rescates.html">Rescates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <article>
+      <header>
+        <h2>Registrar rescate</h2>
+        <p>Al confirmar, el sistema crea la ficha del animal en estado <strong>Rescatado</strong> y notifica al veterinario y al administrador. Los campos marcados con asterisco (*) son obligatorios.</p>
+      </header>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos del rescatista</legend>
+
+          <p>
+            <label for="nombres">Nombres *</label><br>
+            <input type="text" id="nombres" name="nombres" required minlength="2" maxlength="60" autocomplete="given-name" placeholder="Ej.: María Fernanda">
+          </p>
+          <p>
+            <label for="apellidos">Apellidos *</label><br>
+            <input type="text" id="apellidos" name="apellidos" required minlength="2" maxlength="60" autocomplete="family-name" placeholder="Ej.: Pérez Mero">
+          </p>
+          <p>
+            <label for="cedula">Cédula *</label><br>
+            <input type="text" id="cedula" name="cedula" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Debe contener exactamente 10 dígitos" placeholder="1300000000">
+          </p>
+          <p>
+            <label for="correo">Correo electrónico *</label><br>
+            <input type="email" id="correo" name="correo" required autocomplete="email" placeholder="correo@ejemplo.com">
+          </p>
+          <p>
+            <label for="telefono">Teléfono *</label><br>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" title="Debe contener 10 dígitos" autocomplete="tel" placeholder="0990000000">
+          </p>
+          <p>
+            <label for="zona">Zona de cobertura</label><br>
+            <input type="text" id="zona" name="zona" maxlength="80" placeholder="Ej.: Portoviejo norte">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos del rescate</legend>
+
+          <p>
+            <label for="fecha">Fecha del rescate *</label><br>
+            <input type="date" id="fecha" name="fecha" required>
+          </p>
+          <p>
+            <label for="lugar">Lugar *</label><br>
+            <input type="text" id="lugar" name="lugar" required minlength="5" maxlength="150" placeholder="Ej.: Av. Universitaria y calle 5, Portoviejo">
+          </p>
+          <p>
+            <label for="descripcion">Descripción del caso *</label><br>
+            <textarea id="descripcion" name="descripcion" rows="5" cols="40" required minlength="10" maxlength="500" placeholder="Describa el estado del animal y el entorno donde fue encontrado"></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos del animal</legend>
+
+          <p>
+            <label for="nombre-provisional">Nombre provisional *</label><br>
+            <input type="text" id="nombre-provisional" name="nombre_provisional" required maxlength="40" placeholder="Ej.: Canelo">
+          </p>
+          <p>
+            <label for="especie">Especie *</label><br>
+            <select id="especie" name="especie" required>
+              <option value="">Seleccione una opción</option>
+              <option value="perro">Perro</option>
+              <option value="gato">Gato</option>
+            </select>
+          </p>
+          <p>
+            <label for="edad">Edad aproximada (en meses) *</label><br>
+            <input type="number" id="edad" name="edad_meses" required min="0" max="300" step="1" placeholder="Ej.: 18">
+          </p>
+
+          <fieldset>
+            <legend>Sexo *</legend>
+            <p>
+              <input type="radio" id="sexo-macho" name="sexo" value="macho" required>
+              <label for="sexo-macho">Macho</label>
+              <input type="radio" id="sexo-hembra" name="sexo" value="hembra">
+              <label for="sexo-hembra">Hembra</label>
+            </p>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>Características según la especie (opcional)</legend>
+
+          <fieldset>
+            <legend>Si es perro</legend>
+            <p>
+              <label for="tamano">Tamaño</label>
+              <select id="tamano" name="tamano">
+                <option value="">Sin especificar</option>
+                <option value="pequeno">Pequeño</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </p>
+            <p>
+              <label for="energia">Nivel de energía (1 a 5)</label>
+              <input type="number" id="energia" name="nivel_energia" min="1" max="5" step="1">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Si es gato</legend>
+            <p>
+              <label for="pelaje">Pelaje</label>
+              <input type="text" id="pelaje" name="pelaje" maxlength="40" placeholder="Ej.: corto, atigrado">
+            </p>
+            <p>
+              <input type="checkbox" id="esterilizado" name="esterilizado" value="si">
+              <label for="esterilizado">Esterilizado</label>
+            </p>
+          </fieldset>
+        </fieldset>
+
+        <p>
+          <label for="foto">Fotografía (opcional)</label><br>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </p>
+
+        <p>
+          <input type="checkbox" id="acepto" name="acepto" required>
+          <label for="acepto">Confirmo que los datos son correctos y acepto el tratamiento de mis datos personales *</label>
+        </p>
+
+        <p>
+          <button type="submit">Registrar rescate</button>
+          <button type="reset">Limpiar formulario</button>
+        </p>
+      </form>
+    </article>
+
+    <aside aria-labelledby="titulo-ayuda">
+      <h2 id="titulo-ayuda">Ayuda</h2>
+      <p>Una vez registrado, el sistema asigna un número de ficha y podrás ver el estado del animal en la página de <a href="rescates.html">rescates</a>.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sistema de Control de Rescate y Adopción Animal. Proyecto académico de la Universidad Técnica de Manabí, Facultad de Ciencias Informáticas.</p>
+    <p><a href="index.html">Volver al inicio</a></p>
+  </footer>
+</body>
+</html>
